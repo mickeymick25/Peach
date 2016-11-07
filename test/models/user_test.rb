@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  
+
   def setup
   	@user = User.new(name: "Example User", email: "user@example.com",
   					 password: "foobar", password_confirmation: "foobar")
@@ -9,7 +9,7 @@ class UserTest < ActiveSupport::TestCase
 
   #------------------------------- test of Tests
   test "should be valid" do
-	assert @user.valid?  	
+	assert @user.valid?
   end
 
   #------------------------------- Presence Tests
@@ -78,4 +78,8 @@ class UserTest < ActiveSupport::TestCase
   	assert_not @user.valid?
   end
 
+  #------------------------------- multiple browsers Log out
+  test "authenticated? should return false for a user with nil digest" do
+    assert_not @user.authenticated?('')
+  end
 end

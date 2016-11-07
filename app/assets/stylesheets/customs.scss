@@ -2,7 +2,6 @@
 @import "bootstrap";
 
 /* mixins, variables, etc. */
-
 $bg-color:          #FFFFFF;
 $gray-medium-light: #eaeaea;
 
@@ -22,10 +21,9 @@ $gray-medium-light: #eaeaea;
 }
 
 /* universal */
-
 body {
   padding-top: 60px;
-  background-color: $bg-color;  
+  background-color: $bg-color;
 }
 
 section {
@@ -44,7 +42,6 @@ textarea {
 }
 
 /* typography */
-
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
@@ -72,7 +69,6 @@ p {
 
 
 /* header */
-
 #logo {
   float: left;
   margin-right: 10px;
@@ -89,7 +85,6 @@ p {
 }
 
 /* sidebar */
-
 aside {
   section.user_info {
     margin-top: 20px;
@@ -148,6 +143,20 @@ input {
   .form-control {
     color: $state-danger-text;
   }
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
 }
 
 /* footer */
